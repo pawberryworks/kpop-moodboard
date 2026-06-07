@@ -12,6 +12,8 @@
 
   padding: 32px;
   background: var(--color-surface);
+
+  border-bottom: 2px solid var(--color-border);
   /* background: linear-gradient(135deg, #ffd6ec, #e7ddff);
   box-shadow: 0 16px 40px rgba(90, 52, 100, 0.14); */
 }
