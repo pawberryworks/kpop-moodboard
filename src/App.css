@@ -237,3 +237,30 @@
     border-right-color: var(--border);
   }
 } */
+
+.theme-toggle {
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: var(--color-primary-soft);
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--color-primary-soft);
+}

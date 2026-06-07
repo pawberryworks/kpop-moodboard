@@ -1,10 +1,22 @@
+import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import "./App.css";
 
 function App() {
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const handleToggleTheme = () => {
+    setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
+  };
+
   return (
     <main className="app">
-      <Header />
+      <Header theme={theme} onToggleTheme={handleToggleTheme} />
     </main>
   );
 }

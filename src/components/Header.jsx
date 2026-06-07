@@ -1,22 +1,15 @@
-function Header() {
+function Header({ theme, onToggleTheme }) {
+  const nextTheme = theme === "light" ? "dark" : "light";
+
   return (
     <header className="app-header">
-      { <div>
+      <div>
         <p className="eyebrow">your cozy k-pop space</p>
-      </div>
-      
-      
-      /* <div>
-        <p className="eyebrow">your cozy k-pop space</p>
-        <h1>K-pop Moodboard</h1>
-        <p className="subtitle">
-          Save, sort and rediscover your favorite comfort content.
-        </p>
       </div>
 
-      <button className="header-button">
-        Add new item
-      </button> */}
+      <button type="button" className="theme-toggle" onClick={onToggleTheme}>
+        Switch to {nextTheme} mode
+      </button>
     </header>
   );
 }
